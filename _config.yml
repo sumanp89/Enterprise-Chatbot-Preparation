@@ -1,0 +1,26 @@
+# Site settings
+title: Enterprise Chatbot Preparation
+description: Comprehensive guide to building enterprise-grade agentic RAG chatbots at scale
+baseurl: "/Enterprise-Chatbot-Preparation"
+url: "https://sumanp89.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Navigation
+header_pages:
+  - README.md

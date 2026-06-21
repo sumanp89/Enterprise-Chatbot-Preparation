@@ -63,7 +63,7 @@ An agentic, multi-tiered RAG chatbot capable of handling **10M peak daily users*
 - Chunking strategies (semantic chunking vs. fixed token windows) and metadata tagging.
 - Change Data Capture (CDC) pipelines to keep the vector database synced with live Wiki/HTML changes.
 
-[→ Detailed guide](1.%20ingestion.md)
+[→ Detailed guide](1.%20ingestion.html)
 
 ### Phase 2: High-Performance Advanced RAG Architecture
 
@@ -71,7 +71,7 @@ An agentic, multi-tiered RAG chatbot capable of handling **10M peak daily users*
 - Query transformation, expansion, and multi-stage re-ranking (using Cohere/BGE rerankers).
 - Handling ACLs (Access Control Lists) directly within vector database metadata filtering.
 
-[→ Detailed guide](2.%20retrieval.md) | [Vector Searches](2.1-vector-searches.md) | [Vector Indexes](2.2-vector-indexes.md) | [Database Choices](2.3-choices-of-dbs.md)
+[→ Detailed guide](2.%20retrieval.html) | [Vector Searches](2.1-vector-searches.html) | [Vector Indexes](2.2-vector-indexes.html) | [Database Choices](2.3-choices-of-dbs.html)
 
 ### Phase 3: Agent Orchestration & User Persona Handling
 
@@ -79,7 +79,7 @@ An agentic, multi-tiered RAG chatbot capable of handling **10M peak daily users*
 - Routing architectures (Semantic routers or lightweight LLM classifiers) to handle different user personas.
 - Tool use (Function Calling) design patterns, error handling, and fallback mechanisms.
 
-[→ Detailed guide](3.%20interaction-execution.md) | [Dynamic System Prompt](3.1-dynamic-system-prompt.md) | [Session Memory](3.2-chat-session-memory-management.md) | [Tool Calls](3.3-tool-call.md)
+[→ Detailed guide](3.%20interaction-execution.html) | [Dynamic System Prompt](3.1-dynamic-system-prompt.html) | [Session Memory](3.2-chat-session-memory-management.html) | [Tool Calls](3.3-tool-call.html)
 
 ### Phase 4: Production Guardrails & Automated Evaluation (The Safety Net)
 
@@ -87,7 +87,7 @@ An agentic, multi-tiered RAG chatbot capable of handling **10M peak daily users*
 - Defending against prompt injections and data exfiltration.
 - Setting up automated LLM-as-a-Judge evaluation pipelines (using Ragas/TruLens) running in CI/CD.
 
-[→ Detailed guide](4.%20guardrails-auto-evaluation.md)
+[→ Detailed guide](4.%20guardrails-auto-evaluation.html)
 
 ### Phase 5: Infrastructure, Scaling, and Cost Optimization (The Scale-Up)
 
@@ -95,14 +95,14 @@ An agentic, multi-tiered RAG chatbot capable of handling **10M peak daily users*
 - Caching strategies (Semantic caching using Redis) to drastically slash token costs and latency.
 - Prompt engineering optimization (Context distillation, system prompt minimization).
 
-[→ Detailed guide](5.%20infra-cost-scale.md)
+[→ Detailed guide](5.%20infra-cost-scale.html)
 
 ### Phase 6: Continuous Monitoring, Observability, and Fine-Tuning
 
 - Distributed tracing for LLM applications (OpenInference, Phoenix, LangSmith/LangFuse).
 - Mining user logs to build a data flywheel for downstream fine-tuning.
 
-[→ Detailed guide](6.%20monitor-observability-fine-tuning.md)
+[→ Detailed guide](6.%20monitor-observability-fine-tuning.html)
 
 ---
 
@@ -110,11 +110,11 @@ An agentic, multi-tiered RAG chatbot capable of handling **10M peak daily users*
 
 We have methodically traced the entire architectural timeline for an enterprise AI platform built for millions of users from the absolute beginning:
 
-1. **Phase 1 (Data Ingestion Pipeline):** Event-driven multi-speed parsing pathways (Static, 6-Hour, Near-Real-Time) with layout-aware visual token isolation and database-level RBAC tags. [→ Read more](1.%20ingestion.md)
-2. **Phase 2 (Advanced RAG Search):** Dual-engine Hybrid retrieval (Vector HNSW Graph + Lexical BM25) fused via Reciprocal Rank Fusion (RRF) and optimized using a two-stage Cross-Encoder re-ranker. [→ Read more](2.%20retrieval.md)
-3. **Phase 3 (Agent Execution & Memory):** Two-tier intent classification, runtime dynamic prompt assembly blocks in Redis, sliding memory compaction windows, and parameter-validated tool call gateway firewalls. [→ Read more](3.%20interaction-execution.md)
-4. **Phase 4 (Guardrails & Evals):** Multi-layered live defense checks (PII parsing, LlamaGuard intent blocks, and Vectara NLI grounding checking) paired with automated CI/CD golden-set code testing. [→ Read more](4.%20guardrails-auto-evaluation.md)
-5. **Phase 5 (Infrastructure Scaling):** Multi-region load-balanced cluster topologies, vLLM automatic prefix weight caching, and semantic cache layers. [→ Read more](5.%20infra-cost-scale.md)
-6. **Phase 6 (Observability Flywheel):** Non-blocking OpenTelemetry/OpenInference tracking arrays that feed an integrated system improvement and fine-tuning flywheel. [→ Read more](6.%20monitor-observability-fine-tuning.md)
+1. **Phase 1 (Data Ingestion Pipeline):** Event-driven multi-speed parsing pathways (Static, 6-Hour, Near-Real-Time) with layout-aware visual token isolation and database-level RBAC tags. [→ Read more](1.%20ingestion.html)
+2. **Phase 2 (Advanced RAG Search):** Dual-engine Hybrid retrieval (Vector HNSW Graph + Lexical BM25) fused via Reciprocal Rank Fusion (RRF) and optimized using a two-stage Cross-Encoder re-ranker. [→ Read more](2.%20retrieval.html)
+3. **Phase 3 (Agent Execution & Memory):** Two-tier intent classification, runtime dynamic prompt assembly blocks in Redis, sliding memory compaction windows, and parameter-validated tool call gateway firewalls. [→ Read more](3.%20interaction-execution.html)
+4. **Phase 4 (Guardrails & Evals):** Multi-layered live defense checks (PII parsing, LlamaGuard intent blocks, and Vectara NLI grounding checking) paired with automated CI/CD golden-set code testing. [→ Read more](4.%20guardrails-auto-evaluation.html)
+5. **Phase 5 (Infrastructure Scaling):** Multi-region load-balanced cluster topologies, vLLM automatic prefix weight caching, and semantic cache layers. [→ Read more](5.%20infra-cost-scale.html)
+6. **Phase 6 (Observability Flywheel):** Non-blocking OpenTelemetry/OpenInference tracking arrays that feed an integrated system improvement and fine-tuning flywheel. [→ Read more](6.%20monitor-observability-fine-tuning.html)
 
 
